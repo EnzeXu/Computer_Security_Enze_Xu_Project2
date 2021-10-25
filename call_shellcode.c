@@ -16,6 +16,7 @@ const char code[] =
 "\xb0\x0b" /* Line 10: movb $0x0b,%al */
 "\xcd\x80" /* Line 11: int $0x80 */
 ;
+
 int main(int argc, char **argv)
 {
 	char buf[sizeof(code)];
