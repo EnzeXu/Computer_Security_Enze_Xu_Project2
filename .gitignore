@@ -1,2 +1,5 @@
 .idea/*
 ~*
+call_shellcode
+stack
+exploit
