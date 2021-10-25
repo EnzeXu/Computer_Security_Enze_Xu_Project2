@@ -19,4 +19,3 @@ bof(str);
 printf("Returned Properly\n");
 return 1;
 }
-}
