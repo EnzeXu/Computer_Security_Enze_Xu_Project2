@@ -19,7 +19,7 @@ void readHistory(void) {
 			printf("\n");
 		}
 	}
-	
+	printf("\n");
 	fclose(fp);
 	return;
 }
