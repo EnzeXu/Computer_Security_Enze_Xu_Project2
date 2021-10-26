@@ -13,7 +13,7 @@ void readHistory(void) {
 	char c;
 	int count = 0;
 	while(c = fgetc(fp)) {
-		printf("%c", c);
+		printf("%2d ", c);
 		count ++;
 		if (count % 20 == 0) {
 			printf("\n");
