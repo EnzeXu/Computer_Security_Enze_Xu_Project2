@@ -12,7 +12,9 @@ void readHistory(void) {
 	}
 	int count = 0;
 	int c;
-	while(fscanf(fp, "%x", &c)) {
+	int z = 517;
+	while(z--) {
+		fscanf(fp, "%x", &c);
 		printf("%4d ", c);
 		count ++;
 		if (count % 16 == 0) {
