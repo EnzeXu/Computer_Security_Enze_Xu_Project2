@@ -4,7 +4,7 @@
 int main() {
 	char *env = getenv("RTL_SHELL");
 	if (env) {
-		printf("/bin/sh is at %x\n", (unsigned int) shell);
+		printf("/bin/sh is at %x\n", (unsigned int) env);
 	}
 	return 0;
 }
