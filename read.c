@@ -28,7 +28,7 @@ void read1(void) {
 
 void read2(void) {
 	FILE *sf;
-	sf = fopen("badfile"", "rb");
+	sf = fopen("badfile", "rb");
 	int n;
 	unsigned char buf[16];
 	unsigned long count = 0;
