@@ -25,5 +25,6 @@ void readHistory(void) {
 }
 
 int main() {
+	readHistory();
 	return 0;
 }
