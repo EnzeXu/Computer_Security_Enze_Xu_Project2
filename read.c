@@ -10,12 +10,12 @@ void readHistory(void) {
 		perror("Error in opening file .myhistory");
 		return;
 	}
-	char c;
 	int count = 0;
-	while(c = fgetc(fp)) {
-		printf("%2d ", c);
+	int c;
+	while(fscanf(fp, "%x", &c)) {
+		printf("%4d ", c);
 		count ++;
-		if (count % 20 == 0) {
+		if (count % 16 == 0) {
 			printf("\n");
 		}
 	}
