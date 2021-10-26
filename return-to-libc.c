@@ -32,6 +32,6 @@ void main(int argc, char **argv)
 	
 	/* Save the contents to the file "badfile" */
 	badfile = fopen("./badfile", "w");
-	fwrite(buffer, 517, 1, badfile);
+	fwrite(buffer, 40, 1, badfile);
 	fclose(badfile);
 }
