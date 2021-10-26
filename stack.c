@@ -7,8 +7,8 @@ int bof(char *str)
 char buffer[24];
 /* The following statement has a buffer overflow problem */
 strcpy(buffer, str);
-printf("buffer at %s\n", &buffer[0]);
-printf("str at %s\n", &str[0]);
+printf("buffer at %p\n", &buffer);
+printf("str at %p\n", &str);
 return 1;
 }
 int main(int argc, char **argv)
