@@ -1,4 +1,4 @@
-/* exploit.c */
+/* return-to-libc.c */
 /* A program that creates a file containing code for launching shell */
 #include <stdlib.h>
 #include <stdio.h>
